@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifier</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="display">
+    <div class="container">
+        <form action = "/webhook_update" method = "GET">
+            <span id="wrapper">
+                <a href="/" target="_self"  class="button">Home</a>
+                <div class="bhome"></div>            
+        <div class="brand-logo">
+            <div class="logo">
+                <img src="https://www.bob.bt/wp-content/themes/bob/images/logo.svg">
+            </div>
+        </div>
+        <!-- <div class="brand-title">Bhutan Power Coperation Co.</div> -->
+            <div class="inputs">
+                <label for="webhookurl" data-toggle="tooltip" data-placement="bottom" title="Use ngrok if the app is not hosted publicly">Webhook URL</label>
+                <input type="text" name="webhookurl" id="webhookurl" class="form-control" required placeholder="Webhook url">
+                <button type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

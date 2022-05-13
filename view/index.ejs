@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Verifier</title>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="https://www.bob.bt/wp-content/themes/bob/images/logo.svg">
+        <h3>Bank Of Bhutan</h3>
+        <nav class="tabs">
+          <div class="selector"></div>
+          <a href="webhook"><i class="fab fa-superpowers"></i>Webhook</a>
+          <a href="config"><i class="fas fa-hand-rock"></i>Configuration</a>
+          <a href="relation"><i class="fas fa-burn"></i>Relationship Creation</a>
+          <a href="proofres"><i class="fas fa-burn"></i>Proof Request</a>
+        </nav>
+      </div>
+</body>
+<script>
+        var tabs = $('.tabs');
+        var selector = $('.tabs').find('a').length;
+        //var selector = $(".tabs").find(".selector");
+        var activeItem = tabs.find('.active');
+        var activeWidth = activeItem.innerWidth();
+        $(".selector").css({
+          "left": activeItem.position.left + "px",
+          "width": activeWidth + "px"
+        });
+
+        $(".tabs").on("mouseover", "a", function (e) {
+          e.preventDefault();
+          $('.tabs a').removeClass("active");
+          $(this).addClass('active');
+          var activeWidth = $(this).innerWidth();
+          var itemPos = $(this).position();
+          $(".selector").css({
+            "left": itemPos.left + "px",
+            "width": activeWidth + "px"
+          });
+        });         
+</script>
+</html>

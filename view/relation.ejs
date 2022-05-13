@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifier</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="display">
+    <div class="container">
+        <form  action = "/create_relationdid" method = "GET">
+            <span id="wrapper">
+                <a href="/" target="_self"  class="button">Home</a>
+                <div class="bhome"></div>            
+        <div class="brand-logo">
+            <div class="logo">
+                <img src="https://www.bob.bt/wp-content/themes/bob/images/logo.svg">
+            </div>
+        </div>
+        <!-- <div class="brand-title">Bhutan Power Coperation Co.</div> -->
+            <div class="inputs">
+                <div class="form-group">
+                    <p><strong>DomainDID: <%= domaindid%></strong></p>
+                    <label for="domaindid"></label>
+                 </div>
+                 <button type="submit" class="btn btn-primary">Create Relationship DID</button>
+            </div>
+        </form>
+        <!-- <img width="80%" height="80%" src="/images/qrcode.png" alt="Relation QR Code"> -->
+    </div>
+</body>
+</html>
